@@ -1,1 +1,1 @@
-# url-validator
+Validator for RetailCRM projects on Symfony
