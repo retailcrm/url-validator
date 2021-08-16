@@ -63,11 +63,6 @@ class CrmUrl extends Constraint
      */
     public $getFileError = 'Unable to obtain reference values.';
 
-    public function validatedBy(): string
-    {
-        return static::class . 'Validator';
-    }
-
     public function getTargets()
     {
         return self::PROPERTY_CONSTRAINT;
