@@ -1,0 +1,52 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Access to an undefined property Symfony\\\\Component\\\\Validator\\\\Constraint\\:\\:\\$authFail\\.$#"
+			count: 1
+			path: src/Validator/CrmUrlValidator.php
+
+		-
+			message: "#^Access to an undefined property Symfony\\\\Component\\\\Validator\\\\Constraint\\:\\:\\$domainFail\\.$#"
+			count: 1
+			path: src/Validator/CrmUrlValidator.php
+
+		-
+			message: "#^Access to an undefined property Symfony\\\\Component\\\\Validator\\\\Constraint\\:\\:\\$fragmentFail\\.$#"
+			count: 1
+			path: src/Validator/CrmUrlValidator.php
+
+		-
+			message: "#^Access to an undefined property Symfony\\\\Component\\\\Validator\\\\Constraint\\:\\:\\$getFileError\\.$#"
+			count: 1
+			path: src/Validator/CrmUrlValidator.php
+
+		-
+			message: "#^Access to an undefined property Symfony\\\\Component\\\\Validator\\\\Constraint\\:\\:\\$noValidUrl\\.$#"
+			count: 1
+			path: src/Validator/CrmUrlValidator.php
+
+		-
+			message: "#^Access to an undefined property Symfony\\\\Component\\\\Validator\\\\Constraint\\:\\:\\$noValidUrlHost\\.$#"
+			count: 1
+			path: src/Validator/CrmUrlValidator.php
+
+		-
+			message: "#^Access to an undefined property Symfony\\\\Component\\\\Validator\\\\Constraint\\:\\:\\$pathFail\\.$#"
+			count: 1
+			path: src/Validator/CrmUrlValidator.php
+
+		-
+			message: "#^Access to an undefined property Symfony\\\\Component\\\\Validator\\\\Constraint\\:\\:\\$portFail\\.$#"
+			count: 1
+			path: src/Validator/CrmUrlValidator.php
+
+		-
+			message: "#^Access to an undefined property Symfony\\\\Component\\\\Validator\\\\Constraint\\:\\:\\$queryFail\\.$#"
+			count: 1
+			path: src/Validator/CrmUrlValidator.php
+
+		-
+			message: "#^Access to an undefined property Symfony\\\\Component\\\\Validator\\\\Constraint\\:\\:\\$schemeFail\\.$#"
+			count: 1
+			path: src/Validator/CrmUrlValidator.php
+
