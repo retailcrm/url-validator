@@ -1,5 +1,5 @@
 {
-  "name": "retailcrm/validator",
+  "name": "retailcrm/url-validator",
   "description": "Validator for symfony projects",
   "type": "library",
   "keywords": ["Validator", "RetailCRM"],
