@@ -1,6 +1,6 @@
 {
   "name": "retailcrm/url-validator",
-  "description": "Validator for symfony projects",
+  "description": "URL validator for RetailCRM",
   "type": "library",
   "keywords": ["Validator", "RetailCRM"],
   "homepage": "https://www.retailcrm.ru/",
