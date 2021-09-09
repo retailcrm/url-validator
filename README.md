@@ -6,7 +6,7 @@
 
 # RetailCRM URL Validator
 
-This validator will help you validate RetailCRM, Simla, or SimlaChat URLs in your project using [`symfony/validator`](https://packagist.org/packages/symfony/validator).
+This validator will help you validate system URLs in your project using [`symfony/validator`](https://packagist.org/packages/symfony/validator).
 
 # Table of contents
 
@@ -42,7 +42,7 @@ You need to use Symfony Validator to work with this library.
 Please refer to the [official documentation for the `symfony/validator`](https://symfony.com/doc/current/components/validator.html) to learn how to use it.
 If you want to use `symfony/validator` with Symfony framework - you should use [this documentation](https://symfony.com/doc/current/validation.html).
 
-After ensuring that you're using `symfony/validator` you can just append the `@CrmUrl()` annotation to the DTO entity that contains RetailCRM, Simla, or SimlaChat URL.
+After ensuring that you're using `symfony/validator` you can just append the `@CrmUrl()` annotation to the DTO entity field that contains system URL.
 
 After that validator's `validate` call on this DTO will generate the proper violation messages for incorrect URLs.
 
