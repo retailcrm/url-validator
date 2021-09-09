@@ -38,7 +38,7 @@ Replace `path/to/vendor/autoload.php` with the correct path to Composer's `autol
 
 ## Usage
 
-You need to use Symfony Validator to work with this library.
+You have to use Symfony Validator to work with this library.
 Please refer to the [official documentation for the `symfony/validator`](https://symfony.com/doc/current/components/validator.html) to learn how to use it.
 If you want to use `symfony/validator` with Symfony framework - you should use [this documentation](https://symfony.com/doc/current/validation.html).
 
