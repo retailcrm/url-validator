@@ -59,38 +59,53 @@ use RetailCrm\Validator\CrmUrl;
 class Connection
 {
     /**
+     * @var string
+     * 
      * @Assert\NotBlank()
      * @Assert\Url()
      * @CrmUrl()
      */
-    public string $apiUrl;
+    public $apiUrl;
 }
 ```
 
 And below you can find a complete example of usage (*note:* it requires `doctrine/annotations` and `symfony/cache` to work properly).
 
+**Connection.php**
 ```php
 <?php
 
-require __DIR__ . '/vendor/autoload.php';
+namespace App;
 
 use Symfony\Component\Validator\Constraints as Assert;
-use Symfony\Component\Validator\Validation;
 use RetailCrm\Validator\CrmUrl;
 
 class Connection
 {
-    public function __construct(
-        /**
-         * @Assert\NotBlank()
-         * @Assert\Url()
-         * @CrmUrl()
-         */
-        public string $apiUrl
-    )
+    /**
+     * @var string
+     *
+     * @Assert\NotBlank()
+     * @Assert\Url()
+     * @CrmUrl()
+     */
+    public $apiUrl;
+
+    public function __construct(string $apiUrl)
     {
+        $this->apiUrl = $apiUrl;
     }
 }
+```
+
+**app.php**
+```php
+namespace App;
+
+// We assume that `app.php` is stored within a directory that is being autoloaded by Composer.
+require __DIR__ . '/../vendor/autoload.php';
+
+use Symfony\Component\Validator\Validation;
 
 $validator = Validation::createValidatorBuilder()
     ->enableAnnotationMapping(true)
