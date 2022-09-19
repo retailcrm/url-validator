@@ -11,59 +11,30 @@ use Symfony\Component\Validator\Constraint;
  * @Target({"PROPERTY"})
  * @package Retailcrm\Validator
  */
+#[\Attribute]
 class CrmUrl extends Constraint
 {
-    /**
-     * @var string
-     */
-    public $schemeFail = 'Incorrect protocol. Only https is allowed.';
+    public string $schemeFail = 'Incorrect protocol. Only https is allowed.';
 
-    /**
-     * @var string
-     */
-    public $pathFail = 'The domain path must be empty.';
+    public string $pathFail = 'The domain path must be empty.';
 
-    /**
-     * @var string
-     */
-    public $portFail = 'The port does not need to be specified.';
+    public string $portFail = 'The port does not need to be specified.';
 
-    /**
-     * @var string
-     */
-    public $domainFail = 'An invalid domain is specified.';
+    public string $domainFail = 'An invalid domain is specified.';
 
-    /**
-     * @var string
-     */
-    public $noValidUrlHost = 'Incorrect Host URL.';
+    public string $noValidUrlHost = 'Incorrect Host URL.';
 
-    /**
-     * @var string
-     */
-    public $noValidUrl = 'Incorrect URL.';
+    public string $noValidUrl = 'Incorrect URL.';
 
-    /**
-     * @var string
-     */
-    public $queryFail = 'The query must be blank.';
+    public string $queryFail = 'The query must be blank.';
 
-    /**
-     * @var string
-     */
-    public $fragmentFail = 'The fragment should be blank.';
+    public string $fragmentFail = 'The fragment should be blank.';
 
-    /**
-     * @var string
-     */
-    public $authFail = 'No need to provide authorization data.';
+    public string $authFail = 'No need to provide authorization data.';
 
-    /**
-     * @var string
-     */
-    public $getFileError = 'Unable to obtain reference values.';
+    public string $getFileError = 'Unable to obtain reference values.';
 
-    public function getTargets()
+    public function getTargets(): array|string
     {
         return self::PROPERTY_CONSTRAINT;
     }

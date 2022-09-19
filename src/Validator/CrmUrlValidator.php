@@ -16,10 +16,7 @@ class CrmUrlValidator extends ConstraintValidator
     public const BOX_DOMAINS_URL = "https://infra-data.retailcrm.tech/box-domains.json";
     public const CRM_DOMAINS_URL = "https://infra-data.retailcrm.tech/crm-domains.json";
 
-    /**
-     * @var \Symfony\Component\Validator\Constraint
-     */
-    private $constraint;
+    private Constraint $constraint;
 
     /**
      * Validate CRM URL
