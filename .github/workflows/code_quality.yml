@@ -11,6 +11,9 @@ jobs:
   phpcs:
     name: "PHP CodeSniffer"
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        php-version: ['7.3', '7.4', '8.0', '8.1', '8.2']
     steps:
       - name: Check out code into the workspace
         uses: actions/checkout@v2
@@ -19,6 +22,9 @@ jobs:
   phpmd:
     name: "PHP MessDetector"
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        php-version: ['7.3', '7.4', '8.0', '8.1', '8.2']
     steps:
       - name: Check out code into the workspace
         uses: actions/checkout@v2
@@ -33,10 +39,13 @@ jobs:
   phpstan:
     name: PHPStan
     runs-on: ubuntu-18.04
+    strategy:
+      matrix:
+        php-version: ['7.3', '7.4', '8.0', '8.1', '8.2']
     steps:
       - name: Check out code into the workspace
         uses: actions/checkout@v2
       - name: Run PHPStan
-        uses: docker://oskarstark/phpstan-ga
+        uses: docker://oskarstark/phpstan-ga:1.8.0
         with:
           args: analyse src -c phpstan.neon --memory-limit=1G --no-progress
