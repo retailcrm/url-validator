@@ -19,7 +19,6 @@
     <coverage>
         <include>
             <directory>src</directory>
-            <directory>dev</directory>
         </include>
         <report>
             <clover outputFile="coverage.xml"/>
