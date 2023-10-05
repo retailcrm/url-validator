@@ -21,19 +21,20 @@ class CrmUrlValidatorTest extends TestCase
     public function testValidateSuccess(): void
     {
         $validCrms = [
-            'https://asd.retailcrm.ru',
-            'https://test.retailcrm.pro',
-            'https://raisa.retailcrm.es',
-            'https://blabla.simla.com',
-            'https://blabla.simlachat.com',
-            'https://blabla.simlachat.ru',
-            'https://blabla.ecomlogic.com',
+            'https://retailcrm.tvoydom.ru',
             'https://retailcrm.inventive.ru',
             'https://crm.baucenter.ru',
             'https://crm.holodilnik.ru',
             'https://crm.eco.lanit.ru',
             'https://ecom.inventive.ru',
-            'https://retailcrm.tvoydom.ru',
+            'https://test.retailcrm.ru',
+            'https://test.retailcrm.pro',
+            'https://test.retailcrm.es',
+            'https://test.simla.com',
+            'https://test.simlachat.com',
+            'https://test.ecomlogic.com',
+            'https://test.retailcrm.io',
+            'https://test.simla.io'
         ];
 
         $translator = new class () implements TranslatorInterface, LocaleAwareInterface {
